@@ -1,22 +1,33 @@
 //where our iterators live
 var o_o = {
-  each: function(list, callback) {
-    //code here...
+  // each: function(list, callback) {
+  //   //code here...
+  // },
+
+  map: function(list, callback) {
+    var second = [];
+    for (var i = 0; i < list.length; i += 1) {
+        var elm = list[i];
+        elm = elm + 1;
+        second.push(elm); 
+    }
+    return second;
   },
-  map: function(list, callback){
-    //code here...
-  },
+
   filter: function(list, callback) {
-    var output = [];
-      for (var i = 0; i < list.length; i++) {
-        if (callback(list[i])) {
-          output.push(list[i]);
-        }
-      }
-      return output;
+
   }
+    
 };
 
 //expose our iterators to other files
 //such as our assertions
 module.exports = o_o;
+
+
+
+
+
+
+
+
